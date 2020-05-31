@@ -6,6 +6,16 @@ const PREFIX = '!';
 bot.on('ready', () =>{
     console.log('sbot is online');
 });
+
+bot.on('guildMemberAdd',member =>{
+   
+    const channel = member.guild.channels.find(channel => channel.name === "welcome");
+    if(!channel) return;
+    
+    channel.send(`Welcome to our server, ${member}, please introduce yourself and tell how'd you find this server,have nice day ;)` );
+    
+});
+
 bot.on('message',message=>{
      let args = message.content.substring(PREFIX.length).split(' ');
 
