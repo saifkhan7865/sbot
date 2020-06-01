@@ -9,8 +9,10 @@ bot.on('ready', () =>{
 
 bot.on('guildMemberAdd',member =>{
    
-    const channel = member.guild.channels.find(channel => channel.name === "welcome");
-    if(!channel) return;
+    const channel = member.guild.channels.cache.find(channel => channel.name === "welcome");
+    if(!channel) {
+        return;
+       }
     
     channel.send(`Welcome to our server, ${member}, please introduce yourself and tell how'd you find this server,have nice day ;)` );
     
