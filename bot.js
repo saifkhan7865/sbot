@@ -14,7 +14,7 @@ bot.on('guildMemberAdd',member =>{
         return;
        }
     
-    channel.send(`Welcome to our server, ${member}, please introduce yourself and tell how'd you find this server,have nice day ;)` );
+    channel.send(`Welcome to our server, ${member}, please introduce yourself and tell how'd you find this server,have a nice day ;)` );
     
 });
 
