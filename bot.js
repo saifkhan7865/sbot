@@ -7,16 +7,7 @@ bot.on('ready', () =>{
     console.log('sbot is online');
 });
 
-bot.on('guildMemberAdd',member =>{
-   
-    const channel = member.guild.channels.cache.find(channel => channel.name === "welcome");
-    if(!channel) {
-        return;
-       }
-    
-    channel.send(`Welcome to our server, ${member}, please introduce yourself and tell how'd you find this server,also make sure to give your self a role in the #roles channel,have a nice day ;)` );
-    
-});
+
 
 bot.on('message',message=>{
      let args = message.content.substring(PREFIX.length).split(' ');
